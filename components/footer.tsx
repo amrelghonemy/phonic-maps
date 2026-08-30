@@ -11,7 +11,14 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/Phonic-maps-logo.svg" alt="Phonic Maps" className="h-14 object-contain bg-transparent" width={260} height={67} onError={(e) => ((e.target as HTMLImageElement).style.display = "none")} />
+              <img
+                src="/Phonic-maps-logo.svg"
+                alt="Phonic Maps"
+                className="h-11 object-contain bg-white rounded-xl px-4 py-2 shadow-sm ring-1 ring-white/20"
+                width={220}
+                height={57}
+                onError={(e) => ((e.target as HTMLImageElement).style.display = "none")}
+              />
               <span className="font-extrabold text-xl sr-only">Phonic<span className="text-primary-500">Maps</span></span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
