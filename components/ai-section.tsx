@@ -64,7 +64,7 @@ export function AISection() {
                   src="/ai-assist-preview.jpg"
                   alt={isAr ? "AI Assist لإدارة المراجعات - Cafetto cafe" : "AI Assist Review Management - Cafetto cafe"}
                   width={900}
-                  height={1100}
+                  height={574}
                   className="w-full h-auto object-cover"
                 />
               </div>

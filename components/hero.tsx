@@ -65,14 +65,14 @@ export function Hero() {
                   </div>
                 </div>
                 <div className="overflow-hidden">
-                  <Image
-                    src="/dashboard-preview.jpg"
-                    alt="Phonic Maps Dashboard - Analytics Preview"
-                    width={1200}
-                    height={750}
-                    priority
-                    className="w-full h-auto object-cover opacity-95 transition-transform duration-500 hover:scale-105"
-                  />
+                <Image
+                  src="/dashboard-preview.jpg"
+                  alt="Phonic Maps Dashboard - Analytics Preview"
+                  width={1200}
+                  height={600}
+                  priority
+                  className="w-full h-auto object-cover opacity-95 transition-transform duration-500 hover:scale-105"
+                />
                 </div>
               </div>
             </div>
