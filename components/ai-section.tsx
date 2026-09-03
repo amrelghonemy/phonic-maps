@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useLang } from "./language-context";
 
 export function AISection() {
@@ -49,44 +50,23 @@ export function AISection() {
 
           <div className="lg:w-1/2 w-full relative">
             <div className="absolute inset-0 bg-gradient-to-tr from-primary-100 to-secondary-50 rounded-3xl transform rotate-3" />
-            <div className="relative bg-white p-6 rounded-2xl shadow-xl border border-gray-100 text-start">
-              <h4 className="text-sm font-bold text-gray-500 mb-4 border-b pb-2">{isAr ? "محاكاة حية للرد التلقائي" : "Live Auto-Reply Simulation"}</h4>
-              <div className="mb-6">
-                <div className="flex justify-between items-start mb-2">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center font-bold text-gray-500">{isAr ? "أ.م" : "AM"}</div>
-                    <div>
-                      <h5 className="font-bold text-dark text-sm">{isAr ? "أحمد محمد" : "Ahmed Mohamed"}</h5>
-                      <div className="flex gap-1 text-yellow-400 text-xs">
-                        <i className="fa-solid fa-star" /><i className="fa-solid fa-star" /><i className="fa-solid fa-star" /><i className="fa-solid fa-star" /><i className="fa-regular fa-star" />
-                      </div>
-                    </div>
-                  </div>
-                  <span className="text-xs text-gray-400">{isAr ? "قبل ساعتين" : "2 hours ago"}</span>
-                </div>
-                <p className="text-gray-700 text-sm bg-gray-50 p-3 rounded-lg border border-gray-100">
-                  {isAr ? "“التجربة كانت جيدة جداً، الطعام ممتاز في فرع التجمع، ولكن المشكلة الوحيدة كانت التأخير في تقديم الطلب، انتظرنا حوالي 40 دقيقة! أتمنى تحسين هذه النقطة.”" : "“The experience was very good, food is excellent at the downtown branch, but the only issue was the delay in serving the order, we waited about 40 minutes! Hope you improve this point.”"}
-                </p>
-              </div>
-              <div className="flex justify-center mb-6 py-2">
-                <div className="flex items-center gap-2 text-primary-600 text-sm font-semibold bg-primary-50 px-4 py-2 rounded-full">
-                  <i className="fa-solid fa-spinner fa-spin" /> {isAr ? "Phonic Maps يقوم بالتحليل..." : "Phonic Maps is analyzing..."}
+            <div className="relative bg-white p-2 rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
+              <div className="bg-gray-900 rounded-t-xl px-4 py-2.5 flex items-center gap-2 border-b border-gray-800">
+                <span className="w-3 h-3 rounded-full bg-red-500" />
+                <span className="w-3 h-3 rounded-full bg-yellow-500" />
+                <span className="w-3 h-3 rounded-full bg-green-500" />
+                <div className="mx-auto bg-gray-800 rounded px-3 py-1 flex items-center gap-2 text-xs text-gray-400 justify-center">
+                  <i className="fa-solid fa-lock text-[10px]" /> phonicmaps.com/reviews
                 </div>
               </div>
-              <div className="relative">
-                <div className="bg-primary-50 border border-primary-100 p-4 rounded-lg ms-6">
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="font-bold text-primary-700 text-sm flex items-center gap-1"><i className="fa-solid fa-robot" /> {isAr ? "رد المنشأة" : "Business Reply"}</span>
-                    <span className="text-[10px] bg-primary-200 text-primary-800 px-2 py-0.5 rounded">{isAr ? "تم التوليد بواسطة AI" : "AI Generated"}</span>
-                  </div>
-                  <p className="text-gray-700 text-sm leading-relaxed">
-                    {isAr ? (
-                      <>أهلاً بك أستاذ أحمد،<br />سعداء جداً أن الطعام في فرع التجمع نال إعجابك! 🌟<br />لكننا نعتذر بشدة عن التأخير الذي واجهته في تقديم الطلب (40 دقيقة وقت طويل فعلاً). لقد قمنا بتوجيه ملاحظتك المهمة لإدارة الفرع لتحسين سرعة الخدمة وتجنب حدوث ذلك مستقبلاً.<br />نتمنى رؤيتك قريباً لتقديم تجربة مثالية بالكامل. شكراً لملاحظتك البناءة!</>
-                    ) : (
-                      <>Hello Mr. Ahmed,<br />We are very glad you enjoyed the food at the downtown branch! 🌟<br />However, we sincerely apologize for the delay you experienced with your order (40 minutes is indeed too long). We have forwarded your important feedback to the branch management to improve service speed and prevent this in the future.<br />We hope to see you soon to provide a flawless experience. Thank you for your constructive feedback!</>
-                    )}
-                  </p>
-                </div>
+              <div className="overflow-hidden bg-white">
+                <Image
+                  src="/ai-assist-preview.jpg"
+                  alt={isAr ? "AI Assist لإدارة المراجعات - Cafetto cafe" : "AI Assist Review Management - Cafetto cafe"}
+                  width={900}
+                  height={1100}
+                  className="w-full h-auto object-cover"
+                />
               </div>
             </div>
           </div>
