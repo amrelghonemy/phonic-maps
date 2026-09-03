@@ -91,13 +91,12 @@ export function Navbar() {
           <div className="flex items-center gap-3 md:gap-5">
             <a
               href="#contact"
-              className={`hidden md:inline-flex items-center gap-2 text-white font-bold text-sm rounded-full transition-all duration-300 shadow-sm hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 active:shadow-sm ${
-                scrolled ? "bg-primary-600 hover:bg-primary-700 px-5 py-2.5" : "bg-dark hover:bg-black px-6 py-3 shadow-[0_8px_20px_rgba(15,23,42,0.2)]"
+              className={`hidden md:inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white font-bold text-sm rounded-full transition-all duration-300 shadow-sm hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 active:shadow-sm ${
+                scrolled ? "px-5 py-2.5" : "px-6 py-3 shadow-[0_8px_20px_rgba(14,165,233,0.3)]"
               }`}
             >
               {lang === "ar" ? "تسجيل الدخول" : "Login"}
-              <i className="fa-solid fa-arrow-left rtl:hidden hidden md:inline text-xs opacity-70" aria-hidden />
-              <i className="fa-solid fa-arrow-right ltr:hidden hidden md:inline text-xs opacity-70" aria-hidden />
+              <i className={`fa-solid ${lang === "ar" ? "fa-arrow-left" : "fa-arrow-right"} text-xs opacity-80`} aria-hidden />
             </a>
 
             <button

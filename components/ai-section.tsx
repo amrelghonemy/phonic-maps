@@ -43,7 +43,7 @@ export function AISection() {
             </ul>
             <a href="#demo" className="text-primary-600 font-bold hover:text-primary-700 flex items-center gap-2 group w-fit">
               {isAr ? "استكشف قدرات الذكاء الاصطناعي" : "Explore AI Capabilities"}
-              <i className={`fa-solid ${isAr ? "fa-arrow-left" : "fa-arrow-right"} group-hover:translate-x-1 transition-transform`} />
+              <i className={`fa-solid ${isAr ? "fa-arrow-left group-hover:-translate-x-1" : "fa-arrow-right group-hover:translate-x-1"} transition-transform`} aria-hidden />
             </a>
           </div>
 
